@@ -24,6 +24,13 @@
             <label for="lastName">Last Name</label>
             <input ng-model="review.lastName" type="text" id="lastName">
         </fieldset>
+        <!-- Live Preview Section -->
+        <section>
+            <strong>{{ review.stars }} Stars</strong><br>
+            <blockquote>{{ review.body }}</blockquote>
+            <cite><em>{{ review.firstName + ' ' +  review.lastName}}</em></cite>
+        </section>
     </form>
+
 </body>
 </html>
