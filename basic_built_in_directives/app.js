@@ -1,5 +1,5 @@
 (function(){
-  var app = angulage.module('toyStore', []);
+  var app = angular.module('toyStore', []);
   var toys = [
   { name: "pogo stick", price: 20.05 },
   { name: "car", price: 4.75 },
