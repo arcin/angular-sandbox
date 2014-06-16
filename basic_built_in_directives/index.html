@@ -9,7 +9,7 @@
 <body ng-controller="StoreController as store">
   <section ng-repeat="toy in store.toys">
     <h3>{{ toy.name }}</h3>
-    <em>{{ toy.price }}</em>
+    <em>{{ toy.price | currency }}</em>
   </section>
 </body>
 </html>
