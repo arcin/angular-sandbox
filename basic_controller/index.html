@@ -8,7 +8,13 @@
 </head>
 <body>
     <section ng-controller="BasicController as basic">
-        <h3>{{basic.language.english}}</h3>
+        <h1>{{basic.language.english}}</h1>
+    </section>
+    <section ng-controller="PeopleController as people">
+        <div ng-repeat="person in people.people">
+            <h3>{{person.name}}</h3>
+            <p>{{person.age}}</p>
+        </div>
     </section>
 </body>
 </html>
