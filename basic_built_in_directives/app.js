@@ -26,5 +26,8 @@
 
   app.controller('TabController', function(){
     this.tab = 1;
+    this.setTab = function(val){
+      this.tab = val;
+    };
   });
 })();
