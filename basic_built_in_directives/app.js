@@ -23,4 +23,7 @@
   app.controller('StoreController', function(){
     this.toys = toys;
   });
+
+  app.controller('TabController', function(){
+  });
 })();
