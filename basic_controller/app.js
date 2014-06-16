@@ -5,9 +5,9 @@
     spanish: "Hola, AngularJS!"
   };
   var people = [
-  {name: 'charles', age: 21},
-  {name: 'sean', age: 20},
-  {name: 'juan', age: 33}
+  {developer: true, name: 'charles', age: 21},
+  {developer: false, name: 'sean', age: 20},
+  {developer: true, name: 'juan', age: 33}
   ];
 
   app.controller('BasicController', function(){
