@@ -7,15 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/test" method="POST">
+    <form action="/test" method="POST" ng-controller="ReviewController as rCtrl">
         <fieldset>
             <label for="rating">Rating</label>
-            <select ng-model="review.stars" name="select" id="rating">
-                <option value="5">5 stars</option>
-                <option value="4">4 stars</option>
-                <option value="3">3 stars</option>
-                <option value="2">2 stars</option>
-                <option value="1">1 stars</option>
+            <select ng-model="review.stars" ng-options="star for star in rCtrl.stars" name="select" id="rating">
+                <option value="">Choose a Rating</option>
             </select>
         </fieldset>
         <fieldset>
