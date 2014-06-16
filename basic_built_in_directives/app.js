@@ -29,5 +29,8 @@
     this.setTab = function(val){
       this.tab = val;
     };
+    this.isSet = function(val){
+      return this.tab === val;
+    };
   });
 })();
