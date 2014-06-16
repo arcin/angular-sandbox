@@ -15,7 +15,7 @@
     <div>
       <img ng-src="{{ image }}" alt="{{toy.name}}"ng-repeat="image in toy.images" />
     </div>
-    <section class="tab">
+    <section class="tab" ng-controller="TabController as tab">
       <ul>
         <li><a href>Description</a></li>
         <li><a href>Reviews</a></li>
