@@ -13,7 +13,7 @@
       <em>{{ toy.price | currency }}</em>
     </h3>
     <div>
-      <img ng-src="{{ toy.images[0] }}" alt="{{toy.name}}">
+      <img ng-src="{{ image }}" alt="{{toy.name}}"ng-repeat="image in toy.images" />
     </div>
   </section>
 </body>
