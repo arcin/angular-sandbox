@@ -17,8 +17,10 @@
     </div>
     <section class="tab" ng-controller="TabController as tab">
       <ul>
-        <li><a href="#" ng-click="tab.setTab(1)">Description</a></li>
-        <li><a href="#" ng-click="tab.setTab(2)">Reviews</a></li>
+        <li ng-class="{ selected:tab.isSet(1) }">
+          <a href="#" ng-click="tab.setTab(1)">Description</a></li>
+        <li ng-class="{ selected:tab.isSet(2) }">
+          <a href="#" ng-click="tab.setTab(2)">Reviews</a></li>
       </ul>
       <div ng-show="tab.isSet(1)">
         <h4>Description</h4>
