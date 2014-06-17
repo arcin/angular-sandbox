@@ -37,6 +37,7 @@
     this.products = products;
   });
   app.controller('ReviewController', function(){
+    this.review = {};
     this.stars = stars;
   });
 })();
