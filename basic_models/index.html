@@ -17,25 +17,25 @@
             <form action="/test" method="POST" ng-controller="ReviewController as rCtrl">
                 <!-- Live Preview Section -->
                 <section>
-                    <strong>{{ review.stars }} Stars</strong><br>
-                    <blockquote>{{ review.body }}</blockquote>
-                    <cite><em>{{ review.firstName + ' ' +  review.lastName}}</em></cite>
+                    <strong>{{ rCtrl.review.stars }} Stars</strong><br>
+                    <blockquote>{{ rCtrl.review.body }}</blockquote>
+                    <cite><em>{{ rCtrl.review.firstName + ' ' +  rCtrl.review.lastName}}</em></cite>
                 </section>
                 <fieldset>
                     <label for="rating">Rating</label>
-                    <select ng-model="review.stars" ng-options="star for star in rCtrl.stars" name="select" id="rating">
+                    <select ng-model="rCtrl.review.stars" ng-options="star for star in rCtrl.stars" name="select" id="rating">
                         <option value="">Choose a Rating</option>
                     </select>
                 </fieldset>
                 <fieldset>
                     <label for="body">Description</label><br>
-                    <textarea ng-model="review.body" name="body" cols="30" rows="10" id="body"></textarea>
+                    <textarea ng-model="rCtrl.review.body" name="body" cols="30" rows="10" id="body"></textarea>
                 </fieldset>
                 <fieldset>
                     <label for="firstName">First Name</label>
-                    <input ng-model="review.firstName" type="text" id="firstName">
+                    <input ng-model="rCtrl.review.firstName" type="text" id="firstName">
                     <label for="lastName">Last Name</label>
-                    <input ng-model="review.lastName" type="text" id="lastName">
+                    <input ng-model="rCtrl.review.lastName" type="text" id="lastName">
                 </fieldset>
             </form>
         </div>
