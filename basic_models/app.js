@@ -39,5 +39,8 @@
   app.controller('ReviewController', function(){
     this.review = {};
     this.stars = stars;
+    this.addReview = function(product){
+      product.reviews.push(this.review);
+    };
   });
 })();
