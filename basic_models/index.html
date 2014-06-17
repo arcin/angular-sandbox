@@ -10,15 +10,15 @@
     <section ng-controller="ProductController as productCtrl">
         <div ng-repeat="product in productCtrl.products">
             <section class="review" ng-repeat="review in product.reviews">
-                <strong>{{ review.stars }}</strong>
+                <strong>{{ review.stars }} Stars</strong>
                 <blockquote>{{ review.description }}</blockquote>
                 <cite><em>{{ review.firstName + ' ' +  review.lastName}}</em></cite>
             </section>
-            <form action="/test" method="POST" ng-controller="ReviewController as rCtrl">
+            <form ng-submit="rCtrl.addReview(product)" action="/test" method="POST" ng-controller="ReviewController as rCtrl">
                 <!-- Live Preview Section -->
                 <section>
                     <strong>{{ rCtrl.review.stars }} Stars</strong><br>
-                    <blockquote>{{ rCtrl.review.body }}</blockquote>
+                    <blockquote>{{ rCtrl.review.description }}</blockquote>
                     <cite><em>{{ rCtrl.review.firstName + ' ' +  rCtrl.review.lastName}}</em></cite>
                 </section>
                 <fieldset>
@@ -28,8 +28,8 @@
                     </select>
                 </fieldset>
                 <fieldset>
-                    <label for="body">Description</label><br>
-                    <textarea ng-model="rCtrl.review.body" name="body" cols="30" rows="10" id="body"></textarea>
+                    <label for="description">Description</label><br>
+                    <textarea ng-model="rCtrl.review.description" name="description" cols="30" rows="10" id="description"></textarea>
                 </fieldset>
                 <fieldset>
                     <label for="firstName">First Name</label>
