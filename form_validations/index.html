@@ -15,7 +15,7 @@
                 <blockquote>{{ review.description }}</blockquote>
                 <cite><em>{{ review.firstName + ' ' +  review.lastName}}</em></cite>
             </section>
-            <form ng-submit="rCtrl.addReview(product)" action="/test" method="POST" ng-controller="ReviewController as rCtrl" novalidate>
+            <form name="ratingForm" ng-submit="ratingForm.$valid && rCtrl.addReview(product)" action="/test" method="POST" ng-controller="ReviewController as rCtrl" novalidate>
                 <!-- Live Preview Section -->
                 <section>
                     <strong>{{ rCtrl.review.stars }} Stars</strong><br>
